@@ -1,0 +1,189 @@
+{
+  "evaluation": "hand-authored synthetic skill-phrase regression check",
+  "cases": 10,
+  "true_positive": 23,
+  "false_positive": 0,
+  "false_negative": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "warning": "Curated synthetic snippets only; not a representative resume or job-description benchmark and not evidence of hiring validity or fairness.",
+  "case_results": [
+    {
+      "id": "programming-data",
+      "expected": [
+        "Pandas",
+        "Python",
+        "SQL"
+      ],
+      "predicted": [
+        "Pandas",
+        "Python",
+        "SQL"
+      ],
+      "true_positive": [
+        "Pandas",
+        "Python",
+        "SQL"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "ml-frameworks",
+      "expected": [
+        "Machine Learning",
+        "PyTorch",
+        "scikit-learn"
+      ],
+      "predicted": [
+        "Machine Learning",
+        "PyTorch",
+        "scikit-learn"
+      ],
+      "true_positive": [
+        "Machine Learning",
+        "PyTorch",
+        "scikit-learn"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "language-boundaries",
+      "expected": [
+        "Java",
+        "JavaScript"
+      ],
+      "predicted": [
+        "Java",
+        "JavaScript"
+      ],
+      "true_positive": [
+        "Java",
+        "JavaScript"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "systems-languages",
+      "expected": [
+        "C#",
+        "C++"
+      ],
+      "predicted": [
+        "C#",
+        "C++"
+      ],
+      "true_positive": [
+        "C#",
+        "C++"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "genai",
+      "expected": [
+        "Large Language Models",
+        "Retrieval-Augmented Generation"
+      ],
+      "predicted": [
+        "Large Language Models",
+        "Retrieval-Augmented Generation"
+      ],
+      "true_positive": [
+        "Large Language Models",
+        "Retrieval-Augmented Generation"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "cloud-stack",
+      "expected": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "predicted": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "true_positive": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "data-methods",
+      "expected": [
+        "A/B Testing",
+        "Data Analysis",
+        "Time Series Forecasting"
+      ],
+      "predicted": [
+        "A/B Testing",
+        "Data Analysis",
+        "Time Series Forecasting"
+      ],
+      "true_positive": [
+        "A/B Testing",
+        "Data Analysis",
+        "Time Series Forecasting"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "false-positive-phrases",
+      "expected": [],
+      "predicted": [],
+      "true_positive": [],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "api-stack",
+      "expected": [
+        "FastAPI",
+        "REST APIs"
+      ],
+      "predicted": [
+        "FastAPI",
+        "REST APIs"
+      ],
+      "true_positive": [
+        "FastAPI",
+        "REST APIs"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    },
+    {
+      "id": "working-methods",
+      "expected": [
+        "Agile",
+        "Communication",
+        "Research"
+      ],
+      "predicted": [
+        "Agile",
+        "Communication",
+        "Research"
+      ],
+      "true_positive": [
+        "Agile",
+        "Communication",
+        "Research"
+      ],
+      "false_positive": [],
+      "false_negative": []
+    }
+  ]
+}

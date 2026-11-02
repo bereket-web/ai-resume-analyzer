@@ -1,0 +1,17 @@
+Fictional example for software testing and demonstration only.
+
+Mekdes Tadesse
+Data Analyst | Addis Ababa
+
+SUMMARY
+Data analyst with experience using Python and SQL to prepare operational reports and communicate findings.
+
+EXPERIENCE
+Data Analyst — Example Cooperative, 2022–2025
+Built repeatable Python data-cleaning scripts and SQL queries for monthly inventory reports. Documented assumptions and presented findings to a small operations team.
+
+SKILLS
+Python · SQL · pandas · data visualization · Git
+
+EDUCATION
+BSc in Statistics — Fictional University

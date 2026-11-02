@@ -1,0 +1,20 @@
+flowchart LR
+  U[User] --> UI[Local browser UI]
+  U --> CLI[Local CLI]
+  UI --> API[FastAPI on loopback]
+  CLI --> PARSE[PDF / DOCX / TXT parser]
+  API --> PARSE
+  PARSE --> RT[Resume text in memory]
+  UI --> JD[Job description text]
+  CLI --> JD
+  RT --> TAX[Explicit skill alias dictionary]
+  JD --> TAX
+  TAX --> EVID[Skill matches + source excerpts]
+  RT --> TFIDF[TF-IDF cosine overlap]
+  JD --> TFIDF
+  EVID --> SCORE[Weighted, explainable alignment rubric]
+  TFIDF --> SCORE
+  SCORE --> REC[Missing-skill review + truthful resume suggestions]
+  REC --> UI
+  REC --> CLI
+  API -. no persistence .-> PRIV[No disk storage / no external model call]

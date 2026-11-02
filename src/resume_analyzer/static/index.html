@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fb">
+  <title>ClearFit — Resume Analyzer</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#162337;background:#f7f8fb;font-synthesis:none;text-rendering:optimizeLegibility;--ink:#162337;--muted:#617188;--line:#dce3ec;--blue:#315ce8;--teal:#0c8277;--soft:#edf2ff;--paper:#fff;--amber:#9a5e00}
+    *{box-sizing:border-box}body{margin:0;min-width:320px}header{padding:26px max(22px,calc((100% - 1160px)/2));background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-weight:800;letter-spacing:-.04em;font-size:1.35rem}.brand span{color:var(--blue)}.tag{font-size:.86rem;color:var(--muted)}main{max-width:1160px;margin:36px auto;padding:0 22px}.intro{max-width:790px;margin-bottom:27px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-size:.75rem;font-weight:750}.intro h1{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.055em;line-height:1.04;margin:.55rem 0 1rem}.intro p{color:var(--muted);line-height:1.65;margin:0}.privacy{margin-top:16px;border:1px solid #cfe6e0;background:#f1faf7;color:#225d51;padding:12px 15px;border-radius:12px;font-size:.9rem}.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}.panel,.results{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:0 10px 28px #18325609}.panel h2,.results h2{font-size:1.05rem;margin:0 0 14px}.tabs{display:flex;gap:8px;margin-bottom:15px}.tab,button{font:inherit}.tab{background:#f1f4f8;color:#44536a;border:1px solid transparent;padding:9px 12px;border-radius:9px;cursor:pointer;font-size:.9rem}.tab.active{background:var(--soft);color:#2449c5;border-color:#d4defd;font-weight:650}label{display:block;font-size:.88rem;font-weight:650;margin:14px 0 7px}textarea{width:100%;min-height:210px;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;font-size:.9rem;line-height:1.5;resize:vertical;color:var(--ink)}textarea:focus,input:focus{outline:3px solid #315ce829;border-color:var(--blue)}input[type=file]{width:100%;border:1px dashed #aebbd0;border-radius:10px;padding:13px;background:#fafbfe}.help{color:var(--muted);font-size:.8rem;line-height:1.45}.action{margin-top:17px;display:flex;align-items:center;gap:13px;flex-wrap:wrap}.primary{border:0;background:var(--blue);color:#fff;padding:11px 17px;border-radius:10px;font-weight:700;cursor:pointer}.primary:hover{background:#2349d4}.primary:disabled{opacity:.6;cursor:wait}.secondary{border:1px solid var(--line);background:#fff;color:#34445b;padding:9px 12px;border-radius:9px;cursor:pointer}.status{font-size:.88rem;color:var(--muted)}.status.error{color:#a33131}.hidden{display:none!important}.results{margin-top:20px}.empty{padding:24px 0;color:var(--muted);text-align:center}.result-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:17px}.score{font-size:2.4rem;font-weight:800;letter-spacing:-.05em;color:var(--blue)}.score small{font-size:.85rem;color:var(--muted);letter-spacing:0;font-weight:550}.label{font-weight:700}.components{display:flex;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.85rem;margin-top:7px}.result-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}.result-columns h3,.recommendations h3{font-size:.95rem;margin:0 0 10px}.skill{padding:10px 11px;margin:7px 0;border:1px solid var(--line);border-radius:10px}.skill-head{display:flex;justify-content:space-between;gap:10px;font-weight:650;font-size:.88rem}.skill small{display:block;color:var(--muted);font-size:.78rem;margin-top:5px;line-height:1.4}.badge{white-space:nowrap;color:#415571;background:#f0f3f8;border-radius:20px;padding:3px 7px;font-size:.7rem;font-weight:600}.badge.required{color:#8a4d00;background:#fff3dc}.badge.matched{color:#176c52;background:#e8f7f0}.badge.missing{color:#a13b37;background:#fff0ee}.recommendations{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}.recommendations li{margin:9px 0;color:#41516a;line-height:1.5;font-size:.9rem}.fineprint{margin-top:17px;border-radius:10px;background:#f6f7fa;padding:12px;color:#5e6a7c;font-size:.79rem;line-height:1.5}.count{font-size:.8rem;color:var(--muted);margin-left:auto}@media(max-width:780px){header{align-items:flex-start;flex-direction:column;padding:18px 20px}.grid,.result-columns{grid-template-columns:1fr}main{margin:25px auto;padding:0 15px}.panel,.results{padding:17px}.intro h1{font-size:2.25rem}.tag{line-height:1.4}}
+  </style>
+</head>
+<body>
+<header><div class="brand">Clear<span>Fit</span></div><div class="tag">Local-first resume-to-role analysis</div></header>
+<main>
+  <section class="intro">
+    <div class="eyebrow">A transparent career tool</div>
+    <h1>See how your resume speaks to a role.</h1>
+    <p>Compare resume evidence with a job description, inspect recognized skills, and get practical editing prompts. ClearFit highlights text; it does not decide who should be hired.</p>
+    <div class="privacy"><strong>Local processing.</strong> The app sends no resume text to an external AI/API and does not retain analysis after the request. The upload framework may temporarily spool larger files to the computer's temporary directory before cleanup; use a trusted device and review its temporary-file settings.</div>
+  </section>
+  <section class="grid" aria-label="Analysis inputs">
+    <div class="panel">
+      <h2>1. Your resume</h2>
+      <div class="tabs" role="tablist"><button class="tab active" id="pasteTab" type="button">Paste text</button><button class="tab" id="uploadTab" type="button">Upload file</button></div>
+      <div id="pastePanel"><label for="resumeText">Resume text</label><textarea id="resumeText" placeholder="Paste resume text here. ClearFit only reports skills it can point to in this text."></textarea><div class="help">Avoid adding information you do not want processed on this device.</div></div>
+      <div id="uploadPanel" class="hidden"><label for="resumeFile">Choose a file</label><input id="resumeFile" type="file" accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain"><div class="help">PDF, DOCX, or UTF-8 TXT · maximum 5 MB · scanned PDFs are not OCR-processed.</div></div>
+    </div>
+    <div class="panel">
+      <h2>2. The job description</h2>
+      <label for="jobText">Paste the full description</label>
+      <textarea id="jobText" placeholder="Paste the job description, including qualifications and responsibilities."></textarea>
+      <div class="help">Nearby wording such as “required” or “preferred” is used to explain skill importance. Unclear wording stays “unspecified.”</div>
+      <div class="action"><button class="primary" id="analyzeButton" type="button">Analyze alignment</button><button class="secondary" id="sampleButton" type="button">Load fictional example</button><span class="status" id="status" role="status" aria-live="polite"></span></div>
+    </div>
+  </section>
+  <section class="results" id="results" aria-live="polite">
+    <h2>Analysis</h2><div class="empty" id="emptyState">Your evidence-backed comparison will appear here.</div>
+    <div id="resultBody" class="hidden">
+      <div class="result-top"><div><div class="score"><span id="score">—</span><small id="scoreSuffix"></small></div><div class="label" id="scoreLabel"></div><div class="components" id="components"></div></div><div class="help" id="wordCount"></div></div>
+      <div class="result-columns"><div><h3>Skills found in the job</h3><div id="jobSkills"></div></div><div><h3>Evidence in your resume</h3><div id="matchedSkills"></div><h3 style="margin-top:16px">Not found in the provided text</h3><div id="missingSkills"></div></div></div>
+      <div class="recommendations"><h3>Practical next steps</h3><ul id="recommendations"></ul></div>
+      <div class="fineprint" id="disclaimer"></div>
+    </div>
+  </section>
+</main>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  let mode = 'paste';
+  const sampleResume = `Mekdes Tadesse\nData Analyst | Addis Ababa\n\nSUMMARY\nData analyst with experience using Python and SQL to prepare operational reports and communicate findings.\n\nEXPERIENCE\nData Analyst — Example Cooperative, 2022–2025\nBuilt repeatable Python data-cleaning scripts and SQL queries for monthly inventory reports. Documented assumptions and presented findings to a small operations team.\n\nSKILLS\nPython · SQL · pandas · data visualization · Git\n\nEDUCATION\nBSc in Statistics — Fictional University`;
+  const sampleJob = `Data Analyst — Example Company\n\nRequired qualifications:\n- Strong SQL and Python skills for querying and analysis.\n- Experience with data visualization and clear written communication.\n\nPreferred qualifications:\n- Experience with Tableau or Power BI.\n- Git version control is a plus.\n\nResponsibilities include preparing reliable reports and collaborating with business teams.`;
+  $('pasteTab').addEventListener('click', () => setMode('paste'));
+  $('uploadTab').addEventListener('click', () => setMode('upload'));
+  function setMode(next) {
+    mode = next;
+    $('pasteTab').classList.toggle('active', next === 'paste');
+    $('uploadTab').classList.toggle('active', next === 'upload');
+    $('pastePanel').classList.toggle('hidden', next !== 'paste');
+    $('uploadPanel').classList.toggle('hidden', next !== 'upload');
+  }
+  $('sampleButton').addEventListener('click', () => {
+    setMode('paste'); $('resumeText').value = sampleResume; $('jobText').value = sampleJob;
+    setStatus('Fictional sample loaded.');
+  });
+  function setStatus(text, error = false) {
+    $('status').textContent = text; $('status').classList.toggle('error', error);
+  }
+  function node(tag, className, text) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text !== undefined && text !== null) element.textContent = String(text);
+    return element;
+  }
+  function renderSkills(target, rows, kind) {
+    const container = $(target); container.replaceChildren();
+    if (!rows.length) { container.append(node('p', 'help', kind === 'missing' ? 'No missing listed skills.' : 'No recognizable skills found.')); return; }
+    for (const row of rows) {
+      const card = node('div', 'skill'); const head = node('div', 'skill-head');
+      head.append(node('span', '', row.name));
+      const status = kind === 'job' ? row.importance : kind;
+      head.append(node('span', `badge ${status === 'required' ? 'required' : status}`, status)); card.append(head);
+      card.append(node('small', '', row.evidence || row.resume_evidence || row.job_evidence || row.category));
+      container.append(card);
+    }
+  }
+  function renderResult(data) {
+    $('emptyState').classList.add('hidden'); $('resultBody').classList.remove('hidden');
+    $('score').textContent = data.score === null ? '—' : Math.round(data.score);
+    $('scoreSuffix').textContent = data.score === null ? '' : ' / 100';
+    $('scoreLabel').textContent = data.score_label;
+    const c = data.score_components;
+    $('components').replaceChildren();
+    const items = [['Weighted skill coverage', c.skill_coverage_percent], ['Text overlap', c.text_similarity_percent]];
+    for (const [label, value] of items) $('components').append(node('span', '', `${label}: ${value === null ? 'n/a' : `${value}%`}`));
+    $('wordCount').textContent = `Resume text analyzed: ${data.resume_word_count} words · recognized skills: ${data.resume_skills.length}`;
+    renderSkills('jobSkills', data.job_skills, 'job');
+    renderSkills('matchedSkills', data.matched_skills, 'matched');
+    renderSkills('missingSkills', data.missing_skills, 'missing');
+    const list = $('recommendations'); list.replaceChildren();
+    for (const item of data.recommendations) list.append(node('li', '', item));
+    $('disclaimer').textContent = `Score method: ${c.formula}. Skill importance weights: ${c.skill_coverage_weighting}. ${data.score_type}. A missing skill means it was not recognized in this text, not that you lack it. The tool does not assess candidates or make hiring recommendations.`;
+  }
+  $('analyzeButton').addEventListener('click', async () => {
+    const job = $('jobText').value.trim(); const button = $('analyzeButton');
+    if (!job) { setStatus('Add a job description first.', true); $('jobText').focus(); return; }
+    const form = new FormData(); form.append('job_description', job);
+    let endpoint;
+    if (mode === 'upload') {
+      const file = $('resumeFile').files[0];
+      if (!file) { setStatus('Choose a resume file first.', true); return; }
+      form.append('resume', file); endpoint = '/api/analyze-file';
+    } else {
+      const resume = $('resumeText').value.trim();
+      if (!resume) { setStatus('Paste resume text first.', true); $('resumeText').focus(); return; }
+      endpoint = '/api/analyze';
+    }
+    button.disabled = true; setStatus('Analyzing locally…');
+    try {
+      let response;
+      if (mode === 'upload') response = await fetch(endpoint, {method:'POST', body:form});
+      else response = await fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({resume_text:$('resumeText').value, job_description:job})});
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.detail || 'Analysis failed.');
+      renderResult(data); setStatus('Analysis complete. The app does not retain the analysis.');
+    } catch (error) { setStatus(error.message || 'Could not connect to the local app.', true); }
+    finally { button.disabled = false; }
+  });
+})();
+</script>
+</body>
+</html>

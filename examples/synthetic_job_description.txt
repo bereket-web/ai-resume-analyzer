@@ -1,0 +1,13 @@
+Fictional example job description for software testing and demonstration only.
+
+Data Analyst — Example Company
+
+Required qualifications:
+- Strong SQL and Python skills for querying and analysis.
+- Experience with data visualization and clear written communication.
+
+Preferred qualifications:
+- Experience with Tableau or Power BI.
+- Git version control is a plus.
+
+Responsibilities include preparing reliable reports and collaborating with business teams.
