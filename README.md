@@ -66,4 +66,4 @@ tests/                  offline parser, matching, and API tests
 
 ## Release status
 
-Built and verified locally. GitHub publication remains pending access to the approved `bereket-web` owner; no push was made under the connected `bereket74` account. No project-scoped Hugging Face token, model, dataset, or Space was created. The package uses no trained model, so a public model artifact is not applicable to this version.
+Public source repository: [bereket-web/ai-resume-analyzer](https://github.com/bereket-web/ai-resume-analyzer). This version includes source, tests, documentation, and fictional synthetic examples only; no real resumes or private records are bundled. No project-specific Hugging Face model, dataset, or Space was created. The package uses no trained model, so a project model artifact is not applicable to this version.
